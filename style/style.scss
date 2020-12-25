@@ -1,0 +1,40 @@
+html{
+    font-size: 62.5%;
+    background-color: #EBE3AA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #36393B;
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+h1{
+    font-size: 5rem;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 3rem;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 2.5rem;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight:normal; 
+}
+
+a{
+    color: #36393B;
+    text-decoration: none;
+}
+
+@import 'home';
