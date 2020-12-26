@@ -1,6 +1,21 @@
+:root {
+  --clr-light: #EBE3AA;
+  --clr-dark:  #36393B;
+  --hover: #05c46b;
+  --background: var(--clr-light);
+  --text: var(--clr-dark);
+}
+
+.darkmode {
+  --hover: #05c46b;
+  --clr-light: #EBE3AA;
+  --clr-dark:  #36393B;
+  --background: var(--clr-dark);
+  --text: var(--clr-light);
+}
+
 html {
   font-size: 62.5%;
-  background-color: #EBE3AA;
 }
 
 * {
@@ -11,8 +26,9 @@ html {
 }
 
 body {
-  color: #36393B;
+  color: var(--text);
   font-family: 'IBM Plex Mono', sans-serif;
+  background-color: var(--background);
 }
 
 h1 {
@@ -34,12 +50,22 @@ h3 {
 }
 
 a {
-  color: #36393B;
+  color: var(--text);
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--hover);
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+}
+
 .home {
-  background-color: #EBE3AA;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,55 +84,9 @@ a {
 }
 
 .home h3 {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: 0.13em solid #57966a;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0;
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0em;
-  /* Adjust as needed */
   padding-top: 2rem;
   -webkit-animation: typing 4.5s steps(40, end), blink-caret 1s step-end infinite;
           animation: typing 4.5s steps(40, end), blink-caret 1s step-end infinite;
-}
-
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #57966a;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #57966a;
-  }
 }
 
 nav {
@@ -136,5 +116,14 @@ nav ul {
       -ms-flex: 1;
           flex: 1;
   list-style-type: none;
+}
+
+.project {
+  min-height: 90vh;
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

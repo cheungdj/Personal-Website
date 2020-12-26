@@ -1,6 +1,23 @@
+:root {
+    --clr-light: #EBE3AA;
+    --clr-dark:  #36393B;
+    --hover: #05c46b;
+    --background: var(--clr-light);
+    --text: var(--clr-dark);
+}
+
+.darkmode{
+    --hover: #05c46b;
+    --clr-light: #EBE3AA;
+    --clr-dark:  #36393B;
+    --background: var(--clr-dark);
+    --text: var(--clr-light);
+    
+}
+
+
 html{
     font-size: 62.5%;
-    background-color: #EBE3AA;
 }
 
 *{
@@ -10,8 +27,9 @@ html{
 }
 
 body{
-    color: #36393B;
+    color: var(--text);
     font-family: 'IBM Plex Mono', sans-serif;
+    background-color: var(--background)
 }
 
 h1{
@@ -33,8 +51,20 @@ h3{
 }
 
 a{
-    color: #36393B;
+    color: var(--text);
     text-decoration: none;
 }
 
+a:hover{
+    color: var(--hover);
+}
+
+.dark-mode-toggle{
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+}
+
 @import 'home';
+@import 'projects';
