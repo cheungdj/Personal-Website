@@ -16,6 +16,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -58,9 +59,12 @@ a:hover {
   color: var(--hover);
 }
 
+p {
+  color: var(--text);
+}
+
 .dark-mode-toggle {
-  position: absolute;
-  z-index: 100;
+  position: relative;
   top: 1em;
   right: 1em;
 }
@@ -69,18 +73,15 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-left: 2rem;
   padding-top: 20rem;
-  padding-left: 8rem;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
 }
 
 .home h3 {
@@ -98,8 +99,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -113,17 +115,65 @@ nav ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 0 10px;
+          flex: 1 0 10px;
   list-style-type: none;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
 }
 
-.project {
-  min-height: 90vh;
-  width: 80%;
-  margin: auto;
+nav ul a {
+  padding: 10px;
+}
+
+.projects {
+  padding-left: 2rem;
+  padding-top: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  max-height: 20%;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  margin: auto;
+}
+
+.project-container .project {
+  width: 30%;
+  background: white;
+  margin: 0rem 3rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(25%-1em);
+          flex: 0 1 calc(25%-1em);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.project-container .project img {
+  height: 30%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+.projects{
+    padding-left: 2rem;
+    padding-top: 40rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    max-height: 20%;
+    padding-top:5rem;
+    padding-bottom: 10rem;
+    margin: auto;
+    .project{
+        width: 30%;
+        background: white;
+        margin: 0rem 3rem;
+        flex: 0 1 calc(25%-1em);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        img{
+            height:30%;
+        }
+    }
+}

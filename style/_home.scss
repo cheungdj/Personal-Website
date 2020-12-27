@@ -1,10 +1,9 @@
 .home{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
+    padding-left: 2rem;
     padding-top: 20rem;
-    padding-left: 8rem;
-    flex: 3;
     h3{
         padding-top: 2rem;
         animation: 
@@ -21,13 +20,17 @@ nav{
     min-height: 10vh;
     padding: 3rem 0rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     ul{
         display: flex;
         justify-content: space-between;
-        flex: 1;
+        flex: 1 0 10px;
         list-style-type: none;
+        align-content: stretch;
+        a{
+            padding: 10px;
+        }
       
     }
 }

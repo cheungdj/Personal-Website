@@ -18,6 +18,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 *{
@@ -59,12 +60,15 @@ a:hover{
     color: var(--hover);
 }
 
+p{
+    color:var(--text);
+}
+
 .dark-mode-toggle{
-    position: absolute;
-    z-index: 100;
+    position: relative;
     top: 1em;
     right: 1em;
 }
 
 @import 'home';
-@import 'projects';
+@import 'project';
