@@ -1,0 +1,12 @@
+.contact{
+    padding-left: 2rem;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    .contact-card{
+        display:flex;
+        flex-direction: column;
+        width: 80rem;
+        height: 40rem;
+    }
+}   
