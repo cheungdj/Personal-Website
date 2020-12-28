@@ -81,6 +81,14 @@ p{
     cursor:pointer;
 }
 
+.scroll-top{
+    position: fixed;
+    bottom: 4em;
+    right: 1em;
+    width:3rem;
+    background: none;
+    border: none;
+}
 
 
 @import 'home';
