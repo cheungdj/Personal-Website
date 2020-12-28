@@ -1,17 +1,21 @@
 :root {
     --clr-light: #EBE3AA;
     --clr-dark:  #36393B;
+    --clr-project:white;
     --hover: #05c46b;
     --background: var(--clr-light);
     --text: var(--clr-dark);
+    --project: var(--clr-project);
 }
 
 .darkmode{
     --hover: #05c46b;
     --clr-light: #EBE3AA;
     --clr-dark:  #36393B;
+    --clr-project:#3F4D54;
     --background: var(--clr-dark);
     --text: var(--clr-light);
+    --project: var(--clr-project);
     
 }
 
@@ -65,10 +69,19 @@ p{
 }
 
 .dark-mode-toggle{
-    position: relative;
-    top: 1em;
+    position: absolute;
+    top: 2em;
     right: 1em;
+    width:3rem;
+    background: none;
+    border: none;
 }
+
+.dark-mode-toggle:hover{
+    cursor:pointer;
+}
+
+
 
 @import 'home';
 @import 'project';

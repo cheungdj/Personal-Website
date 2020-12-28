@@ -1,17 +1,21 @@
 :root {
   --clr-light: #EBE3AA;
   --clr-dark:  #36393B;
+  --clr-project:white;
   --hover: #05c46b;
   --background: var(--clr-light);
   --text: var(--clr-dark);
+  --project: var(--clr-project);
 }
 
 .darkmode {
   --hover: #05c46b;
   --clr-light: #EBE3AA;
   --clr-dark:  #36393B;
+  --clr-project:#3F4D54;
   --background: var(--clr-dark);
   --text: var(--clr-light);
+  --project: var(--clr-project);
 }
 
 html {
@@ -64,9 +68,16 @@ p {
 }
 
 .dark-mode-toggle {
-  position: relative;
-  top: 1em;
+  position: absolute;
+  top: 2em;
   right: 1em;
+  width: 3rem;
+  background: none;
+  border: none;
+}
+
+.dark-mode-toggle:hover {
+  cursor: pointer;
 }
 
 .home {
@@ -157,8 +168,9 @@ nav ul a {
 }
 
 .project-container .project {
-  width: 30%;
-  background: white;
+  max-height: 50vh;
+  min-height: 60vh;
+  background: var(--project);
   margin: 0rem 3rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 calc(25%-1em);
@@ -166,14 +178,30 @@ nav ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-align: center;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .project-container .project img {
-  height: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40%;
+}
+
+@media screen and (max-width: 900px) {
+  .project-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project-container .project {
+    margin: 3rem 0rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
