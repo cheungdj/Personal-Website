@@ -217,6 +217,7 @@ nav ul a {
 .contact {
   padding-left: 2rem;
   padding-top: 10rem;
+  padding-bottom: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,11 +231,32 @@ nav ul a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 80rem;
-  height: 40rem;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75%;
+  height: 40vh;
+  margin: auto;
+  border-radius: 1rem;
+  background: var(--project);
+  padding-bottom: 30rem;
+  margin-top: 5rem;
+}
+
+.contact .contact-card .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 /*# sourceMappingURL=style.css.map */
